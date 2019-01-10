@@ -5,7 +5,7 @@ the WHILE TRUE pattern:
    while True:
        ...
        if <event has occurred>:
-           break
+           break 0
        ...
 
 See the module that is the COMPANION to this one for the same examples,
