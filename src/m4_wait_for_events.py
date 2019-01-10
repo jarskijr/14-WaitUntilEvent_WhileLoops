@@ -39,8 +39,8 @@ import math
 def main():
     """ Calls the   TEST   functions in this module. """
     # run_test_sum_until_prime_input()
-    run_test_next_prime()
-   # run_test_prime_gap()
+    # run_test_next_prime()
+    run_test_prime_gap()
    # run_test_wait_for_sum_of_cubes()
 
 
@@ -315,6 +315,17 @@ def run_test_prime_gap():
 
 
 def prime_gap(m):
+    secondprime = 3
+    firstprime = 2
+    while True:
+        if secondprime - firstprime == m:
+            break
+        else:
+            firstprime = next_prime(firstprime + 1)
+            secondprime = next_prime(secondprime + 1)
+        if m % 2 != 0:
+            m = m + 1
+    return firstprime
     """
     What comes in:  An integer   m   that is at least 2.
     What goes out:
@@ -345,7 +356,7 @@ def prime_gap(m):
       :type m: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   The testing code is already written for you (above).
     #
     # IMPLEMENTATION REQUIREMENT:
